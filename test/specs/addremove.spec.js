@@ -14,6 +14,13 @@ describe('My Login application', () => {
     });
 
     it('should delete two "Delete" elements', async () => {
+        for (let i = 5; i > 3; i--) {
+            await addRemove.deleteButton2.click();
+        }
+        await browser.pause(2000);
+    });
 
+    it('should have three elements remaining', async () => {
+        await expect(addRemove.deleteButton).toBeElementsArrayOfSize(3)
     });
 });
