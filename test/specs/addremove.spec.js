@@ -1,6 +1,6 @@
 const addRemove = require('../pageobjects/addremove.page');
 
-describe('My Login application', () => {
+describe('My add/remove application', () => {
     it('should click the Add Element button 5 times', async () => {
         await addRemove.open();
         for (let i = 0; i < 5; i++) {
